@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Agency — Credential</title>
+
+  <meta
+    name="description"
+    content="Agency Credential — Selected Projects"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <span>AGENCY</span>
+      <small>CREDENTIAL</small>
+    </div>
+
+    <div class="header-label">
+      SELECTED PROJECTS
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">OUR WORK</p>
+
+      <h1>
+        Selected<br>
+        Projects
+      </h1>
+
+      <p class="hero-text">
+        PROJECTS
+      </p>
+    </section>
+
+
+    <section class="projects-section">
+
+      <div class="section-header">
+        <span>PROJECTS</span>
+        <span id="project-count"></span>
+      </div>
+
+      <div
+        id="projects-grid"
+        class="projects-grid"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Project Panel -->
+
+  <dialog id="project-dialog">
+
+    <div class="dialog-inner">
+
+      <button
+        id="close-dialog"
+        class="close-button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div id="project-content"></div>
+
+    </div>
+
+  </dialog>
+
+
+  <script src="projects.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
