@@ -135,7 +135,10 @@ body {
 
   line-height: 1.9;
 
-  direction: rtl;
+  direction: ltr;
+   
+  text-align: center;
+
 
 }
 
