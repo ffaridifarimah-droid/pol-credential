@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #8fadb6;
+  background: #628a96;
   color: #111;
   direction: rtl;
 }
@@ -80,18 +80,21 @@ body {
 -------------------------------- */
 
 .hero-logo {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 180px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 150px;
+  justify-content: center;
+  margin: 20px 0 0;
 }
 
 .hero-logo img {
   display: block;
-  width: auto;
+  width: 420px;
+  max-width: 80vw;
   height: auto;
-  max-width: 100%;
-  max-height: 150px;
+  max-height: 180px;
   object-fit: contain;
 }
 
@@ -348,12 +351,17 @@ dialog::backdrop {
   }
 
   .hero-logo {
+    width: 100%;
     min-height: 120px;
-    margin-top: 20px;
+    margin: 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-logo img {
-    max-width: 85%;
+    width: 320px;
+    max-width: 85vw;
     max-height: 120px;
   }
 
