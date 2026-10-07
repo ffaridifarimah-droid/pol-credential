@@ -62,16 +62,19 @@ body {
 
 .hero {
   padding: 10vw 5vw 8vw;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   direction: ltr;
 }
 
 .eyebrow {
-  margin: 10px 0;
+  width: 100%;
+  margin: 10px 0 40px;
   font-size: 11px;
   letter-spacing: 0.2em;
+  text-align: left;
 }
 
 
@@ -80,13 +83,12 @@ body {
 -------------------------------- */
 
 .hero-logo {
-  grid-column: 1 / -1;
   width: 100%;
-  min-height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 0 0;
+  padding: 0;
 }
 
 .hero-logo img {
@@ -96,6 +98,7 @@ body {
   height: auto;
   max-height: 180px;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 
@@ -104,9 +107,8 @@ body {
 -------------------------------- */
 
 .hero-text {
-  grid-column: 1 / -1;
   width: 100%;
-  margin: 50px 0 0;
+  margin: 60px 0 0;
   font-size: 16px;
   line-height: 1.9;
   direction: ltr;
@@ -154,9 +156,11 @@ body {
   padding: 35px;
   background: #f4f2ed;
   cursor: pointer;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   transition:
     background 0.3s ease,
     color 0.3s ease;
@@ -175,9 +179,11 @@ body {
 
 .project-logo {
   flex: 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 40px;
 }
 
@@ -220,8 +226,10 @@ dialog {
   width: 100%;
   max-width: 1000px;
   min-height: 70vh;
+
   border: none;
   padding: 0;
+
   background: #f4f2ed;
   color: #111;
 }
@@ -241,14 +249,19 @@ dialog::backdrop {
   position: absolute;
   top: 25px;
   left: 25px;
+
   width: 45px;
   height: 45px;
+
   border: 1px solid #111;
   border-radius: 50%;
+
   background: transparent;
   color: #111;
+
   font-size: 25px;
   line-height: 1;
+
   cursor: pointer;
 }
 
@@ -270,9 +283,11 @@ dialog::backdrop {
 
 .detail-logo {
   height: 160px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 60px;
 }
 
@@ -284,15 +299,19 @@ dialog::backdrop {
 
 .detail-label {
   margin: 0 0 15px;
+
   font-size: 10px;
   letter-spacing: 0.2em;
+
   direction: ltr;
 }
 
 .project-detail h1 {
   margin: 0;
+
   font-size: clamp(50px, 8vw, 100px);
   line-height: 0.9;
+
   font-weight: 500;
   letter-spacing: -0.06em;
 }
@@ -300,12 +319,15 @@ dialog::backdrop {
 .detail-line {
   width: 100%;
   height: 1px;
+
   background: #111;
+
   margin: 50px 0;
 }
 
 .detail-description {
   max-width: 600px;
+
   font-size: 20px;
   line-height: 2;
 }
@@ -313,15 +335,19 @@ dialog::backdrop {
 .detail-placeholder {
   margin-top: 80px;
   padding-top: 20px;
+
   border-top: 1px solid #111;
 }
 
 .detail-placeholder span {
+  display: block;
+
+  margin-bottom: 20px;
+
   font-size: 10px;
   letter-spacing: 0.15em;
+
   direction: ltr;
-  display: block;
-  margin-bottom: 20px;
 }
 
 .detail-placeholder p {
@@ -336,6 +362,8 @@ dialog::backdrop {
 
 @media (max-width: 700px) {
 
+  /* Header */
+
   .site-header {
     height: 70px;
     padding: 0 20px;
@@ -345,31 +373,67 @@ dialog::backdrop {
     display: none;
   }
 
+
+  /* Hero */
+
   .hero {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
     padding: 80px 20px;
   }
 
+  .eyebrow {
+    width: 100%;
+
+    margin: 10px 0 30px;
+
+    text-align: left;
+  }
+
+
+  /* Hero Logo */
+
   .hero-logo {
     width: 100%;
-    min-height: 120px;
-    margin: 20px 0 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 20px 0 0;
+    padding: 0;
   }
 
   .hero-logo img {
+    display: block;
+
     width: 320px;
     max-width: 85vw;
     max-height: 120px;
+
+    height: auto;
+
+    margin: 0 auto;
   }
 
+
+  /* Hero Text */
+
   .hero-text {
+    width: 100%;
+
     margin: 50px 0 0;
+
     white-space: normal;
     text-align: center;
   }
+
+
+  /* Projects */
 
   .projects-section {
     padding: 0 20px 60px;
@@ -392,6 +456,9 @@ dialog::backdrop {
     max-width: 160px;
   }
 
+
+  /* Dialog */
+
   dialog {
     width: 94%;
     min-height: 80vh;
@@ -400,6 +467,9 @@ dialog::backdrop {
   .dialog-inner {
     padding: 60px 25px;
   }
+
+
+  /* Project Detail */
 
   .project-detail h1 {
     font-size: 60px;
